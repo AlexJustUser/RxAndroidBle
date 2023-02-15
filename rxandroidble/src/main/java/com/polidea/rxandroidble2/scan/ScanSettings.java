@@ -325,13 +325,13 @@ public class ScanSettings implements Parcelable, ExternalScanSettingsExtension<S
 //         *                          delivered after the requested delay or when the internal buffers fill up.
 //         * @throws IllegalArgumentException If {@code reportDelayMillis} &lt; 0.
 //         */
-//        public ScanSettings.Builder setReportDelay(long reportDelayMillis) {
-//            if (reportDelayMillis < 0) {
-//                throw new IllegalArgumentException("reportDelay must be > 0");
-//            }
-//            mReportDelayMillis = reportDelayMillis;
-//            return this;
-//        }
+        public ScanSettings.Builder setReportDelay(long reportDelayMillis) {
+            if (reportDelayMillis < 0) {
+                throw new IllegalArgumentException("reportDelay must be > 0");
+            }
+            mReportDelayMillis = reportDelayMillis;
+            return this;
+        }
 //
 //        /**
 //         * Set the number of matches for Bluetooth LE scan filters hardware match
@@ -342,14 +342,14 @@ public class ScanSettings implements Parcelable, ExternalScanSettingsExtension<S
 //         *                     {@link ScanSettings#MATCH_NUM_MAX_ADVERTISEMENT}
 //         * @throws IllegalArgumentException If the {@code matchMode} is invalid.
 //         */
-//        public ScanSettings.Builder setNumOfMatches(@MatchNum int numOfMatches) {
-//            if (numOfMatches < MATCH_NUM_ONE_ADVERTISEMENT
-//                    || numOfMatches > MATCH_NUM_MAX_ADVERTISEMENT) {
-//                throw new IllegalArgumentException("invalid numOfMatches " + numOfMatches);
-//            }
-//            mNumOfMatchesPerFilter = numOfMatches;
-//            return this;
-//        }
+        public ScanSettings.Builder setNumOfMatches(@MatchNum int numOfMatches) {
+            if (numOfMatches < MATCH_NUM_ONE_ADVERTISEMENT
+                    || numOfMatches > MATCH_NUM_MAX_ADVERTISEMENT) {
+                throw new IllegalArgumentException("invalid numOfMatches " + numOfMatches);
+            }
+            mNumOfMatchesPerFilter = numOfMatches;
+            return this;
+        }
 //
 //        /**
 //         * Set match mode for Bluetooth LE scan filters hardware match
@@ -359,14 +359,14 @@ public class ScanSettings implements Parcelable, ExternalScanSettingsExtension<S
 //         *                  {@link ScanSettings#MATCH_MODE_STICKY}
 //         * @throws IllegalArgumentException If the {@code matchMode} is invalid.
 //         */
-//        public ScanSettings.Builder setMatchMode(@MatchMode int matchMode) {
-//            if (matchMode < MATCH_MODE_AGGRESSIVE
-//                    || matchMode > MATCH_MODE_STICKY) {
-//                throw new IllegalArgumentException("invalid matchMode " + matchMode);
-//            }
-//            mMatchMode = matchMode;
-//            return this;
-//        }
+        public ScanSettings.Builder setMatchMode(@MatchMode int matchMode) {
+            if (matchMode < MATCH_MODE_AGGRESSIVE
+                    || matchMode > MATCH_MODE_STICKY) {
+                throw new IllegalArgumentException("invalid matchMode " + matchMode);
+            }
+            mMatchMode = matchMode;
+            return this;
+        }
 
         /**
          * Build {@link ScanSettings}.
